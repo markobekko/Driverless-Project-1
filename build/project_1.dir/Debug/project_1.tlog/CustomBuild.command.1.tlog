@@ -1,0 +1,10 @@
+^C:\CPP\EAGLE\DRIVERLESS\PROJECT_1\CMAKELISTS.TXT
+setlocal
+C:\CPP\CMake\bin\cmake.exe -SC:/CPP/Eagle/Driverless/project_1 -BC:/CPP/Eagle/Driverless/project_1/build --check-stamp-file C:/CPP/Eagle/Driverless/project_1/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
